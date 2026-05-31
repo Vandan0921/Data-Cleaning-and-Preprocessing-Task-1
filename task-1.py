@@ -19,7 +19,7 @@ for col in df.columns:
         df[col].fillna(df[col].mean(), inplace=True)
 
     else:
-        df[col] = df[col].fillna(df[col].mode()[0] , inplace=True)
+        df[col] = df[col].fillna(df[col].mode()[0])
 
 # Remove Duplicate Rows
 print("\nDuplicate Rows:", df.duplicated().sum())
